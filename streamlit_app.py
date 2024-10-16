@@ -8,10 +8,10 @@ import cv2
 
 # Load the model
 @st.cache_resource
-def load_trained_model():
-    return load_model('model.h5')
+def load_trained_model(model_path):
+    return load_model(model_path)
 
-model = load_trained_model()
+model = load_trained_model('model.h5')
 
 # Class names (placeholder, replace with actual class names)
 class_names = ["biotite", "bornite", "chrysocolla" , "malachite" , "muscovite" ,"pyrite" ,"quartz"]  # Modify this as per your model's classes
