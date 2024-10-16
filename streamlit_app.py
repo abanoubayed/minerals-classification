@@ -9,11 +9,11 @@ import cv2
 # Load the model
 @st.cache_resource
 #funtion to load the model
-def load_model():
-    model = load_model('model.h5')
+def load_pretrained_model(path):
+    model = load_model(path)
     return model            
 
-model = load_model()
+model = load_pretrained_model('model.h5')
 
 # Class names (placeholder, replace with actual class names)
 class_names = ["biotite", "bornite", "chrysocolla" , "malachite" , "muscovite" ,"pyrite" ,"quartz"]  # Modify this as per your model's classes
