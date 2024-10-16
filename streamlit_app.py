@@ -9,11 +9,10 @@ import cv2
 # Load the model
 @st.cache_resource
 #funtion to load the model
-def load_pretrained_model(path):
-    model = load_model(path)
-    return model            
+def load_trained_model():
+    return load_model('model.h5')
 
-model = load_pretrained_model('model.h5')
+model = load_trained_model()
 # Ensure the correct reduction setting is applied
 if hasattr(model.loss, 'reduction'):
     model.loss.reduction = 'sum_over_batch_size'  # Or set another valid option
