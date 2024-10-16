@@ -14,6 +14,9 @@ def load_pretrained_model(path):
     return model            
 
 model = load_pretrained_model('model.h5')
+# Ensure the correct reduction setting is applied
+if hasattr(model.loss, 'reduction'):
+    model.loss.reduction = 'sum_over_batch_size'  # Or set another valid option
 
 # Class names (placeholder, replace with actual class names)
 class_names = ["biotite", "bornite", "chrysocolla" , "malachite" , "muscovite" ,"pyrite" ,"quartz"]  # Modify this as per your model's classes
