@@ -9,7 +9,9 @@ import cv2
 # Load the model
 @st.cache_resource
 def load_trained_model(model_path):
-    return load_model(model_path)
+    model = load_model(model_path)
+    return model
+
 
 model = load_trained_model('model.h5')
 
