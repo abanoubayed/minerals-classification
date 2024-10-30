@@ -4,4 +4,4 @@ pandas
 matplotlib
 Tensorflow
 keras
-opencv-python-headless
+opencv-python
